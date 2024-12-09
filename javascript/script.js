@@ -83,8 +83,13 @@ class Figures {
 
     place_figure(figure) {
         // TODO: place figure in screen, check for collisions
-
+        for (let i = 0; i < this.figures[figure].length; i++) {
+            let x = this.figures[figure][i][0];
+            let y = this.figures[figure][i][1];
+            this.screen_pixels[y][x].draw("act");
+        };
     };
 };
 
-screen()['pixels'][0][0].draw("act");
+let figures = new Figures(screen()['table'], screen()['pixels']);
+figures.place_figure("wh");
