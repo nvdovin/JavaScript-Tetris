@@ -87,4 +87,4 @@ class Figures {
     };
 };
 
-screen()['pixels'][2][3].draw("act");
+screen()['pixels'][0][0].draw("act");
